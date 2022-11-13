@@ -26,5 +26,5 @@ app.use(UserRouter)
 app.use('/upload', express.static(path.join(__dirname, 'upload')))
 app.use('/public', express.static(path.join(__dirname, 'public')))
 
-app.listen(app.get('port'))
-console.log(`Server en el puerto ${app.get('port')}`)
+app.listen(process.env.PORT || 3000)
+console.log(`Server en el puerto ${process.env.PORT || 3000}`)
