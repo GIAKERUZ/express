@@ -1,0 +1,13 @@
+<%- include('./partials/header.ejs'); %>
+<h1>POST</h1>
+
+<%for(let vueltas of response){%>
+<article>
+  <h3><%= vueltas.id %></h3>
+  <span></span>
+  <h2><%= vueltas.title %></h2>
+  <span></span>
+  <p><%= vueltas.body %></p>
+  
+</article>
+<%}%> <%- include('./partials/footer.ejs'); %>

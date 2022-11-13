@@ -1,0 +1,16 @@
+<%- include('./partials/header.ejs'); %>
+<h1><%=title%></h1>
+
+<% if(isActive){%>
+<p>El servidor esta activo</p>
+<%}else{%>
+<p>El servidor esta inactivo</p>
+<% } %>
+<ul>
+  <% for(let i = 0 ; i < users.length ; i++){ %>
+  <li><%= users[i].id %></li>
+  <li><%= users[i].name %></li>
+  <li><%= users[i].lastname %></li>
+  <% } %>
+</ul>
+<%- include('./partials/footer.ejs'); %>
